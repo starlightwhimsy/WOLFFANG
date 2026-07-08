@@ -5,7 +5,8 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Compile WOLFFANG
         run: g++ -O3 wolffang.cpp -o wolffang.exe
       - name: Upload Artifact
